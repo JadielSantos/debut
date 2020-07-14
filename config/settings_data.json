@@ -255,6 +255,46 @@
           "show_share_buttons": true,
           "social_message": "Spread the word"
         }
+      },
+      "text-box": {
+        "type": "text-box",
+        "settings": {
+          "text-box-title": "Shipping info",
+          "text-box-content": "<p>Please remember shipping will take up to 3 weeks<\/p>"
+        }
+      },
+      "1594748305612": {
+        "type": "call-to-action-blocks",
+        "blocks": {
+          "1594748305612-0": {
+            "type": "text",
+            "settings": {
+              "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            }
+          },
+          "1594748305612-1": {
+            "type": "select",
+            "settings": {
+              "link": "shopify:\/\/products\/brigadeiro",
+              "linktext": "Go For It"
+            }
+          },
+          "1594748329908": {
+            "type": "select",
+            "settings": {
+              "link": "shopify:\/\/blogs\/news",
+              "linktext": "Share"
+            }
+          }
+        },
+        "block_order": [
+          "1594748305612-0",
+          "1594748305612-1",
+          "1594748329908"
+        ],
+        "settings": {
+          "text-box": "Free Gifts!"
+        }
       }
     },
     "content_for_index": [
@@ -262,7 +302,8 @@
       "feature-row",
       "feature-columns",
       "collection",
-      "quotes"
+      "quotes",
+      "1594748305612"
     ]
   },
   "presets": {

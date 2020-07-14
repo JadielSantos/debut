@@ -1,0 +1,41 @@
+<div id="section-cta">
+  <div class="page-width">
+    <div class="section-header text-center">
+      <h2>{{ section.settings.text-box }}</h2>
+    </div>
+    <div class="text-center">
+      <a href="{{ section.settings.link }}" class="btn">{{ section.settings.linktext }}</a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Call to Action",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text-box",
+      "label": "Heading",
+      "default": "Title"
+    },
+    {
+      "type": "text",
+      "id": "linktext",
+      "label": "Button text",
+      "default": "Click here"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Button link"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Call to Action",
+      "name":"Call to Action"
+    }
+  ]
+}
+{% endschema %}

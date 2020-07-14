@@ -1,0 +1,79 @@
+<div id="section-cta">
+  <div class="section-header text-center">
+    <h2>{{ section.settings.text-box }}</h2>
+  </div>
+
+  <div class="text-center">
+    {% for block in section.blocks %}
+      {%- case block.type -%}
+        {%- when 'text' -%}
+          <div style="display: block; margin: -1rem 0 0;">
+            <p>{{ block.settings.description }}</p>
+          </div>
+        {%- when 'select' -%}
+          <a href="{{ block.settings.link }}" class="btn" style="margin: 1rem;">{{ block.settings.linktext }}</a>
+      {%- endcase -%}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CTA Blocks",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "text",
+      "id": "text-box",
+      "label": "label",
+      "default": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "select",
+      "name": "Select",
+      "settings": [
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Button link"
+        },
+        {
+          "type": "text",
+          "id": "linktext",
+          "label": "Button text",
+          "default": "Click here"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Description",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>Add your description here</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Call to Action",
+      "name": "Call to Action Blocks",
+      "blocks": [
+        {
+          "type": "text"
+        },
+        {
+          "type": "select"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

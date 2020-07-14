@@ -1,0 +1,33 @@
+{%- comment -%}
+  Static Section Sample
+{%- endcomment -%}
+
+<div id="textsection">
+  <div class="page-width">
+    <div class="section-header text-center">
+      <h2>{{ section.settings.text-box-title }}</h2>
+    </div>
+    <div class="text-center">
+      <p>{{ section.settings.text-box-content }}</p>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text Box",
+    "settings": [
+      {
+        "type": "text",
+        "id": "text-box-title",
+        "label": "Heading",
+        "placeholder": "Add title"
+      },
+      {
+        "type": "richtext",
+        "id": "text-box-content",
+        "label": "Add custom text below"
+      }
+    ]
+  }
+{% endschema %}
